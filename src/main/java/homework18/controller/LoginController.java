@@ -14,7 +14,7 @@ public class LoginController {
     }
 
     @PostMapping("/login")
-    public String register(){
+    public String goToProfilePage(){
 
         return "redirect:/profile";
     }

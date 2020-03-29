@@ -21,6 +21,6 @@ public class RegisterController {
     @PostMapping("/register")
     public String register(RegisterDto form) {
         service.register(form);
-        return "redirect:/";
+        return "redirect:/login";
     }
 }

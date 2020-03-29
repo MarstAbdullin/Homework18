@@ -18,7 +18,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
-    @Qualifier(value = "myUserSecurityService")
+    @Qualifier(value = "myUserDetailsService")
     private UserDetailsService userDetailsService;
 
     @Autowired
@@ -26,8 +26,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        http.csrf().disable();
 
         http.authorizeRequests().antMatchers("/").permitAll();
+
+        http.authorizeRequests().antMatchers("/register").permitAll();
 
         http.formLogin()
                 .loginPage("/login")

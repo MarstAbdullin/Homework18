@@ -1,6 +1,6 @@
 package homework18.controller;
 
-import homework18.security.UserSecurityImpl;
+import homework18.security.UserDetailsImpl;
 import homework18.model.User;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
@@ -14,7 +14,7 @@ public class ProfileController {
     @PreAuthorize("isAuthenticated()")
     @GetMapping("/profile")
     public String getProfile(Authentication authentication, Model model) {
-        UserSecurityImpl userDetails = (UserSecurityImpl) authentication.getPrincipal();
+        UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
         User user = userDetails.getUser();
         model.addAttribute("user", user);
         return "profile";
