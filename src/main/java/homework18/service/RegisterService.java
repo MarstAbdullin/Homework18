@@ -4,5 +4,5 @@ import homework18.dto.RegisterDto;
 
 
 public interface RegisterService {
-    void signUp(RegisterDto form);
+    void register(RegisterDto form);
 }

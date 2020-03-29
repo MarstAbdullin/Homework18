@@ -6,7 +6,7 @@
 <body>
 <div align="center">
     <form action="/register" method="post">
-        <h1>SignUp</h1>
+        <h1>Registration</h1>
         <br>
         <input type="email" name="email" placeholder="Email">
         <br>

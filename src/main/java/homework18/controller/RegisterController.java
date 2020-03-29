@@ -14,13 +14,13 @@ public class RegisterController {
     private RegisterService service;
 
     @GetMapping("/register")
-    public String getSignUpPage() {
+    public String getRegisterPage() {
         return "register";
     }
 
     @PostMapping("/register")
-    public String signUp(RegisterDto form) {
-        service.signUp(form);
-        return "redirect:/register";
+    public String register(RegisterDto form) {
+        service.register(form);
+        return "redirect:/";
     }
 }

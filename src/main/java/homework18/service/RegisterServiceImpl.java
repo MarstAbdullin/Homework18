@@ -18,7 +18,7 @@ public class RegisterServiceImpl implements RegisterService {
     private PasswordEncoder passwordEncoder;
 
     @Override
-    public void signUp(RegisterDto form) {
+    public void register(RegisterDto form) {
         User user = User.builder()
                 .email(form.getEmail())
                 .hash(passwordEncoder.encode(form.getPassword()))

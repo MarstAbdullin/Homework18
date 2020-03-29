@@ -6,7 +6,7 @@
 <body>
 <div align="center">
     <form action="/login" method="post">
-        <h1>SignIn</h1>
+        <h1>Login</h1>
         <br>
         <input type="email" name="email" placeholder="Email">
         <br>
